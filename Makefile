@@ -3,6 +3,7 @@ VENV_DIR=backend/.venv
 
 install:
 	test -d $(VENV_DIR) || $(PYTHON) -m venv $(VENV_DIR)
+	$(PYTHON) -m pip install --upgrade pip  # 确保pip是最新版本
 	$(VENV_DIR)/bin/python -m pip install -r backend/requirements.txt
 	cd frontend && npm install
 
